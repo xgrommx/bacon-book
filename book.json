@@ -1,0 +1,16 @@
+{
+    "generator": "site",
+    "title": "Bacon.js - FRP (functional reactive programming) library for Javascript",
+    "description": null,
+    "plugins": [
+        "jsbin",
+        "anchors"
+    ],
+    "theme": "theme",
+    "pluginsConfig": {
+        "fontSettings": {
+            "theme": "white",
+            "family": "sans"
+        }
+    }
+}
