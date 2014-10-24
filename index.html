@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="./manifest.appcache">
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Introduction | Bacon.js - FRP (functional reactive programming) library for Javascript</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The idea of Functional Reactive Programming is quite well described by Conal Elliot at Stack Overflow.">
+        <meta name="generator" content="GitBook 1.1.1">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="gitbook/style.css">
+
+    
+    <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+    
+
+
+        
+    <div class="book"  data-level="0" data-basepath="." data-revision="1414166817383">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    
+    <a href="" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="./" >Bacon.js - FRP (functional reactive programming) library for Javascript</a>
+    </h1>
+</div>
+
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+    
+        
+        <li class="chapter active" data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 0%;min-width: 0%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_1">
+                    
+                        <h1 id="intro"><a name="intro" class="plugin-anchor" href="#intro"><span class="fa fa-link"></span></a>Intro</h1>
+<p>The idea of Functional Reactive Programming is quite well described by Conal Elliot at <a href="http://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631" target="_blank">Stack Overflow</a>.</p>
+<p>Bacon.js is a library for functional reactive programming. Or let&apos;s say it&apos;s a library for
+working with <a href="#event">events</a> and dynamic values (which are called <a href="#property">Properties</a> in Bacon.js).</p>
+<p>Anyways, you can wrap an event source,
+say &quot;mouse clicks on an element&quot; into an <a href="#eventstream"><code>EventStream</code></a> by saying</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> cliks = $(<span class="hljs-string">&quot;h1&quot;</span>).asEventStream(<span class="hljs-string">&quot;click&quot;</span>)
+</code></pre>
+<p>Each EventStream represents a stream of events. It is an Observable object, meaning
+that you can listen to events in the stream using, for instance, the <a href="#stream-onvalue"><code>onValue</code></a> method
+with a callback. Like this:</p>
+<pre><code class="lang-js">cliks.onValue(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{ alert(<span class="hljs-string">&quot;you clicked the h1 element&quot;</span>) })
+</code></pre>
+<p>But you can do neater stuff too. The Bacon of bacon.js is in that you can transform,
+filter and combine these streams in a multitude of ways (see API below). The methods <a href="#observable-map"><code>map</code></a>,
+<a href="#observable-filter"><code>filter</code></a>, for example, are similar to same functions in functional list programming
+(like <a href="http://documentcloud.github.com/underscore/" target="_blank">Underscore</a>). So, if you say</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> plus = $(<span class="hljs-string">&quot;#plus&quot;</span>).asEventStream(<span class="hljs-string">&quot;click&quot;</span>).map(<span class="hljs-number">1</span>)
+<span class="hljs-keyword">var</span> minus = $(<span class="hljs-string">&quot;#minus&quot;</span>).asEventStream(<span class="hljs-string">&quot;click&quot;</span>).map(-<span class="hljs-number">1</span>)
+<span class="hljs-keyword">var</span> both = plus.merge(minus)
+</code></pre>
+<p>.. you&apos;ll have a stream that will output the number 1 when the &quot;plus&quot; button is clicked
+and another stream outputting -1 when the &quot;minus&quot; button is clicked. The <code>both</code> stream will
+be a merged stream containing events from both the plus and minus streams. This allows
+you to subscribe to both streams with one handler:</p>
+<pre><code class="lang-js">both.onValue(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(val)</span> </span>{ <span class="hljs-comment">/* val will be 1 or -1 */</span> })
+</code></pre>
+<p>In addition to EventStreams, bacon.js has a thing called <a href="#property"><code>Property</code></a>, that is almost like an
+EventStream, but has a &quot;current value&quot;. So things that change and have a current state are
+Properties, while things that consist of discrete events are EventStreams. You could think
+mouse clicks as an EventStream and mouse position as a Property. You can create Properties from
+an EventStream with <a href="#observable-scan"><code>scan</code></a> or <a href="#stream-toproperty"><code>toProperty</code></a> methods. So, let&apos;s say</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span><span class="hljs-params">(x, y)</span> </span>{ <span class="hljs-keyword">return</span> x + y }
+<span class="hljs-keyword">var</span> counter = both.scan(<span class="hljs-number">0</span>, add)
+counter.onValue(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sum)</span> </span>{ $(<span class="hljs-string">&quot;#sum&quot;</span>).text(sum) })
+</code></pre>
+<p>The <code>counter</code> property will contain the sum of the values in the <code>both</code> stream, so it&apos;s practically
+a counter that can be increased and decreased using the plus and minus buttons. The <a href="#observable-scan"><code>scan</code></a> method
+was used here to calculate the &quot;current sum&quot; of events in the <code>both</code> stream, by giving a &quot;seed value&quot;
+<code>0</code> and an &quot;accumulator function&quot; <code>add</code>. The scan method creates a property that starts with the given
+seed value and on each event in the source stream applies the accumulator function to the current
+property value and the new value from the stream.</p>
+<p>Properties can be very conveniently used for assigning values and attributes to DOM elements with JQuery.
+Here we assign the value of a property as the text of a span element whenever it changes:</p>
+<pre><code class="lang-js">property.assign($(<span class="hljs-string">&quot;span&quot;</span>), <span class="hljs-string">&quot;text&quot;</span>)
+</code></pre>
+<p>Hiding and showing the same span depending on the content of the property value is equally straightforward</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hiddenForEmptyValue</span><span class="hljs-params">(value)</span> </span>{ <span class="hljs-keyword">return</span> value == <span class="hljs-string">&quot;&quot;</span> ? <span class="hljs-string">&quot;hidden&quot;</span> : <span class="hljs-string">&quot;visible&quot;</span> }
+property.map(hiddenForEmptyValue).assign($(<span class="hljs-string">&quot;span&quot;</span>), <span class="hljs-string">&quot;css&quot;</span>, <span class="hljs-string">&quot;visibility&quot;</span>)
+</code></pre>
+<p>In the example above a property value of &quot;hello&quot; would be mapped to &quot;visible&quot;, which in turn would result in Bacon calling</p>
+<pre><code class="lang-js">$(<span class="hljs-string">&quot;span&quot;</span>).css(<span class="hljs-string">&quot;visibility&quot;</span>, <span class="hljs-string">&quot;visible&quot;</span>)
+</code></pre>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-jsbin/plugin.js"></script>
+    
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
